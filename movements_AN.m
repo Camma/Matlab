@@ -15,7 +15,7 @@ close all
 clc
 clear all
 %cluster
-%matlabpool open 2
+matlabpool open 4
 %init number of times the movement is repeated
 nIter=0;
 %input for map
@@ -104,6 +104,7 @@ elseif (inp==6)
     nCars=1;
     movement(1,1)=2;
 elseif (inp==7)
+    tic
     A=-1*zeros(300,300);
     A(:,2)=1;
     A(:,4)=1;
@@ -234,3 +235,4 @@ for i=2:1:nIter
     end
     
 end
+toc
